@@ -24,12 +24,18 @@ Route::post('/login',[LoginController::class,'authenticate']);
 Route::post('/logout',[LoginController::class,'logout']);
 Route::get('/register-customer',[RegisterController::class,'index'])->middleware('guest');
 Route::post('/register-customer',[RegisterController::class,'store']);
+Route::get('/register-pengajar',[RegisterController::class,'index2'])->middleware('guest');
+// Route::post('/register-tutor',[RegisterController::class,'store2']);
 // Close Registrasi And Login
 
 //Setup Profile Customer
 Route::get('/setup-profile/{id}',[ProfileController::class,'index'])->middleware('auth');
 Route::post('/setup-profile',[ProfileController::class,'create'])->middleware('auth');
 //Close Setup Profile Customer
+
+//Setup Profile Pengajar
+Route::post('/setup-pengajar',[ProfileController::class,'create2'])->middleware('auth');
+//Close Setup Profile pengajar
 
 
 Route::get('/',[HomeController::class,'index']);

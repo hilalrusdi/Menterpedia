@@ -20,24 +20,34 @@
                 <div class="m-5 text-start text-color-prymary">
                     <h1 class="fs-3 mt-0">Profil Pengajar</h1>
                     <div class="d-flex flex-column mt-2">
-                        <form class="mt-2">
+                        <form class="mt-2" action="/setup-pengajar" method="post">
+
+                            <input type="hidden" name="id_user" value="{{ $id }}">
+
                             <div class="mb-3">
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama ( Sesuai KTP )">
+                            <input type="text" name="nama" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama ( Sesuai KTP )">
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tanggal Lahir">
+                                <input type="text" name="tl" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tanggal Lahir">
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"  placeholder="Alamat ( Sesuai KTP )"></textarea>
+                                <textarea class="form-control" name="alamat" id="exampleFormControlTextarea1" rows="3"  placeholder="Alamat ( Sesuai KTP )"></textarea>
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"  placeholder="Domisili"></textarea>
+                                <textarea class="form-control" name="domisili" id="exampleFormControlTextarea1" rows="4"  placeholder="Domisili"></textarea>
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"  placeholder="Biodata ( Termasuk riwayat pendidikan dan prestasi )"></textarea>
+                                <textarea class="form-control" name="biodata" id="exampleFormControlTextarea1" rows="6"  placeholder="Biodata ( Termasuk riwayat pendidikan dan prestasi )"></textarea>
                             </div>
 
+                            <input type="hidden" name="account_status" value="unverified">
+
+                            {{-- Picture file dummy for now --}}
+                            <input type="hidden" name="scan_ktp" value="dummy_ktp">
+                            <input type="hidden" name="scan_ijazah" value="dummy_ijazah">
+                            <input type="hidden" name="transkrip_nilai" value="dummy_nilai">
                             
+                                                        
 
                             
                         </form>
@@ -45,7 +55,6 @@
                 </div> 
                 
             </div>
-
 
             <div class=" box-2 d-flex flex-column h-100">
                 <div class="m-5 text-start text-color-prymary">
@@ -99,7 +108,7 @@
                     </div>
 
                     <div class="d-grid gap-2 mt-lg-3">
-                        <button class="btn btn-primary" type="button">Login</button>
+                        <button class="btn btn-primary" type="submit">Simpan</button>
                     </div>
 
                     
@@ -108,6 +117,8 @@
 
                 
             </div>
+
+
         </div>
         </div>
     </div>

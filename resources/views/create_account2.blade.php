@@ -41,9 +41,9 @@
             </div>
             <div class=" box-2 d-flex flex-column h-100">
                 <div class="m-5 text-start text-color-prymary">
-                    <h1 class="fs-2 mt-3">Registrasi</h1>
+                    <h1 class="fs-2 mt-3">Registrasi Pengajar</h1>
                     <div class="d-flex flex-column ">
-                        <p class=" mb-4 text-color-link">Ingin bergabung sebagi pengajar? <a href="/register-pengajar">klik disini</a></p>
+                        <p class=" mb-4 text-color-link">Ingin bergabung sebagi Siswa? <a href="/register-customer">klik disini</a></p>
                         
                         <form action="/register-customer" method="POST">
                           @csrf
@@ -89,12 +89,12 @@
                                 </div>
                             </div>
 
-                            <input type="hidden" name="user_role" value='customer'>
+                            <input type="hidden" name="user_role" value='pengajar'>
 
 
 
                             <div class="d-grid gap-2 mt-3">
-                                <button class="btn btn-primary" type="submit">Daftar Sebagai Siswa</button>
+                                <button class="btn btn-primary" type="submit">Daftar Sebagai Pengajar</button>
                             </div>
                         </form>
 

@@ -21,7 +21,7 @@
                 <div class="m-3 text-start text-color-prymary">
                     <h1 class="fs-5 mt-0">Setup Profil</h1>
                     <div class="d-flex flex-column mt-2">
-                        <form action="/setup-profile" class="mt-2" method="POST">
+                        <form action="/setup-profile" class="mt-2" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
                                 <input type="text" name="nama" class=" form-control @error('nama') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama">
@@ -47,13 +47,21 @@
                                     </div>
                                 @enderror
                             </div>
-                            <div class="pict card-body text-center border">
+                            {{-- <div class="pict card-body text-center border">
                                 <div class="mt-4 mb-4 d-none d-md-block">
                                     <img id="frame" src="images (1).jpg" class="img-fluid frame" />
                                 </div>
+                            </div> --}}
+                            <div class="mb-3">
+                                <label for="formFile" class="form-label">Default file input example</label>
+                                <input class="form-control @error('foto_profil') is-invalid @enderror" name="foto_profil" type="file" id="formFile">
+                                @error('foto_profil')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                             <input type="hidden" name="id_user" value="{{ $id }}">
-                            <input type="hidden" name="foto_profil" value="dummy">
                             <div class="d-grid gap-2 mt-lg-4">
                                 <button class="btn btn-primary" type="submit">Simpan Profil</button>
                             </div>
