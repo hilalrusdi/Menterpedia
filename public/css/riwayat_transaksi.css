@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200;300;500&display=swap');
+
+.text-color-prymary{color: #626464;}
+.text-color-link{color: #818181;}
+.main-color{color:#03045E}
+.p-color {color: #ee82ee}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url('BG.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+
+.search-form span{
+
+    position: absolute;
+    right: 11px;
+    top: 13px;
+    padding: 1px;
+    border-left: 1px solid #d1d5db;
+    
+
+}
+.left-pan{
+    padding-left: 4px;
+}
+
+.left-pan i{
+   
+   padding-left: 7px;
+}
+
+.form-input{
+
+    height: 55px;
+   
+    border-radius: 30%;
+}
+
+.form-input:focus{
+
+    box-shadow: none;
+    border:none;
+}

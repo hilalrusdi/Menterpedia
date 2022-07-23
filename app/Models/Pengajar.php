@@ -9,5 +9,15 @@ class Pengajar extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['id'];
+    protected $fillable = [
+        'id_user',
+        'nama',
+        'tanggal_lahir',
+        'nomer_hp',
+        'alamat',
+        'biodata',
+        'foto',
+        'scan_ktp',
+        'status_akun'
+    ];
 }

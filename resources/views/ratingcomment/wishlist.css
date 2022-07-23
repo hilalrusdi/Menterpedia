@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200;300;500&display=swap");
+
+.text-color-prymary {
+    color: #626464;
+}
+.text-color-link {
+    color: #818181;
+}
+.main-color {
+    color: #03045e;
+}
+.p-color {
+    color: #ee82ee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    background: url("BG.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}

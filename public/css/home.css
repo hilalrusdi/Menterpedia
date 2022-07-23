@@ -1,0 +1,55 @@
+.bg-blue{
+    background: #D1EFF9;
+}
+.bg-blue-dark{
+    background: #00B4D8;
+}
+
+.carousel {
+    position: relative;
+    padding: 8px;
+}
+
+nav{
+    z-index: 1;
+}
+
+main {
+    margin-top: -24px;
+    z-index: 2;
+}
+
+.carousel .carousel-item img {
+    max-width: 100%;
+    margin: 0 auto; /* Align slide image horizontally center in Bootstrap v3 */
+}
+
+
+.slideshow-ads-prev span {
+    margin-right: -620px;
+}
+.slideshow-ads-next span {
+    margin-left: -620px;
+}
+
+.kategori-slide-prev{
+    
+    margin-left: -20px;
+    margin-top: 45px;
+    font-size: 46px;
+    width: 3rem;
+    height: 3rem;
+}
+
+.kategori-slide-next{
+    position: absolute;
+    margin-top: 45px;
+    font-size: 46px;
+    width: 3rem;
+    height: 3rem;
+}
+
+.kategori-slide-prev ion-icon,
+.kategori-slide-next ion-icon {
+    color: black;
+}

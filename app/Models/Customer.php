@@ -9,10 +9,12 @@ class Customer extends Model
 {
     use HasFactory;
 
-
-    protected $guarded = ['id'];
-
-    public function user() {
-        return $this->belongsTo(User::class);
-    }
+    protected $fillable = [
+        'id_user',
+        'nama',
+        'tanggal_lahir',
+        'nomer_hp',
+        'alamat',
+        'foto'
+    ];
 }
